@@ -45,7 +45,7 @@ It is pre seeded with the following values.
 
 The API has 4 endpoints and they are:
 
-* __POST__ - __/purchase__
+* __POST__ - __localhost:4000/purchase__
 Purchase a quantity of an item granted it is in stock and there is enough stock to fulfill the order. To do so post JSON in the following format:
 
 ```json
@@ -57,11 +57,11 @@ Purchase a quantity of an item granted it is in stock and there is enough stock 
 }
 ```
 
-* __GET__ - __/inventory___
+* __GET__ - localhost:4000/inventory
 This request returns all products in the database.
 
-* __GET__ - __/inventory?stock___
+* __GET__ - localhost:4000/inventory?stock
 This request returns all in stock products in the database.
 
-* __GET__ - __/inventory?title=pop___
+* __GET__ - localhost:4000/inventory?title=pop
 This request returns a given product based on its title.
