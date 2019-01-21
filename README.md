@@ -57,11 +57,14 @@ Purchase a quantity of an item granted it is in stock and there is enough stock 
 }
 ```
 
-* __GET__ - localhost:4000/inventory
+* __GET__ - __localhost:4000/inventory__
+
 This request returns all products in the database.
 
-* __GET__ - localhost:4000/inventory?stock
+* __GET__ - __localhost:4000/inventory?stock__
+
 This request returns all in stock products in the database.
 
-* __GET__ - localhost:4000/inventory?title=pop
+* __GET__ - __localhost:4000/inventory?title=pop__
+
 This request returns a given product based on its title.
