@@ -39,7 +39,7 @@ defmodule ProductsApi.ProductList do
 
   def get_product_by_title(title), do: Repo.all(from p in Product, where: p.title == ^title, select: p)
 
-  def get_all_in_stock(), do: Repo.all(from p in Product, where: p.inventory_count != 0, select: p)
+  def get_all_in_stock(), do: Repo.all(from p in Product, where: p.inventory_count > 0, select: p)
 
   @doc """
   Creates a product.

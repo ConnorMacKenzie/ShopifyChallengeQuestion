@@ -1,20 +1,34 @@
 # ProductsApi
 
-To start your Phoenix server:
+This is my submission for the Summer 2019 Developer Intern Challenge Question.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+The API is built using the Phoenix framework for elixir accompanied with a MySQL database.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+### Database
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+The database consists of a single table with the columns, title, price and inventory_count.
 
-## Learn more
+### Endpoints
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+The API has 4 endpoints and they are:
+
+* __POST__ - __/purchase__
+Purchase a quantity of an item granted it is in stock and there is enough stock to fulfill the order. To do so post JSON in the following format:
+
+```json
+{
+"purchase": {
+	"title": "hamburger",
+	"quantity": 1
+	}
+}
+```
+
+* __GET__ - __/inventory___
+This request returns all products in the database.
+
+* __GET__ - __/inventory?stock___
+This request returns all in stock products in the database.
+
+* __GET__ - __/inventory?title=pop___
+This request returns a given product based on its title.
