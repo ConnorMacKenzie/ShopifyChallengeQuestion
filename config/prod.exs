@@ -20,7 +20,7 @@ config :products_api, ProductsApiWeb.Endpoint,
 config :logger, level: :info
 
 # Configure your database
-config :hello, Hello.Repo,
+config :products_api, ProductsApi.Repo,
   url: System.get_env("JAWSDB_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
